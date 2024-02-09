@@ -9,7 +9,7 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 def index():
   return render_template('index.html')
 
-@socketio.on('send notification):
+@socketio.on('send notification'):
 def handle_notification(data):
   socketio.emit('receive_notification', data)
   print(data)
