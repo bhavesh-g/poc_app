@@ -15,5 +15,5 @@ def handle_notification(data):
   print(data)
 
 if __name__ == '__main__':
-  socketio.run(app, debug=True)
+  socketio.run(app, allow_unsafe_werkzeug=True)
 
